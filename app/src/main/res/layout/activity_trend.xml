@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8">
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_weight="70"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:columnWidth="100dp"
+                android:drawSelectorOnTop="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="1"
+                android:stretchMode="columnWidth"
+                android:background="#FFFFFFFF"
+                android:verticalSpacing="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <Button
+                android:text="증시동향"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#DC143C"
+                android:textColor="#FFFFFF"
+                android:clickable="false"
+                android:layout_weight="0.5"/>
+
+            <Button
+                android:id="@+id/gotoProgramBtn"
+                android:text="프로그램"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#DC143C"
+                android:textColor="#FFFFFF	"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

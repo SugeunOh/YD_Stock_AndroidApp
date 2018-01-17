@@ -1,0 +1,294 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/content_main"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TabHost
+        android:id="@+id/tabHost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="8">
+
+                <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- 첫 번째 페이지. content1 -->
+
+                    <LinearLayout
+                        android:id="@+id/content1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal"
+                            android:weightSum="15">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:paddingLeft="10dp"
+                                android:text="종목명"
+                                android:gravity="center_vertical"
+                                android:textAlignment="viewStart"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="현재가   "
+                                android:gravity="center_vertical"
+                                android:textAlignment="textEnd"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="매수량"
+                                android:gravity="center_vertical"
+                                android:textAlignment="textEnd"
+                                android:textSize="13dp" />
+                            <TextView
+                                android:text="  "
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textSize="13dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical"
+                                android:textSize="13dp"
+                                android:text="등락율"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#D3D3D3"/>
+
+
+                        <ListView
+                            android:id="@+id/listViewKospi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <!-- 두 번째 페이지. content2 -->
+                    <LinearLayout
+                        android:id="@+id/content2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal"
+                            android:weightSum="15">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:paddingLeft="10dp"
+                                android:text="종목명"
+                                android:gravity="center_vertical"
+                                android:textAlignment="viewStart"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="현재가   "
+                                android:gravity="center_vertical"
+                                android:textAlignment="textEnd"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="매수량"
+                                android:gravity="center_vertical"
+                                android:textAlignment="textEnd"
+                                android:textSize="13dp" />
+                            <TextView
+                                android:text="  "
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textSize="13dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical"
+                                android:textSize="13dp"
+                                android:text="등락율"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#D3D3D3"/>
+
+                        <ListView
+                            android:id="@+id/listViewKosdaq"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <!-- 세 번째 페이지. content3 -->
+
+                    <LinearLayout
+                        android:id="@+id/content3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal"
+                            android:weightSum="15">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:paddingLeft="10dp"
+                                android:text="종목명"
+                                android:gravity="center_vertical"
+                                android:textAlignment="viewStart"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="현재가   "
+                                android:gravity="center_vertical"
+                                android:textAlignment="textEnd"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="매수량"
+                                android:gravity="center_vertical"
+                                android:textAlignment="textEnd"
+                                android:textSize="13dp" />
+                            <TextView
+                                android:text="  "
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textSize="13dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical"
+                                android:textSize="13dp"
+                                android:text="등락율"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#D3D3D3"/>
+
+                        <ListView
+                            android:id="@+id/listViewInterest"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <!-- 원래 여기 -->
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/gotoTrendBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="#DC143C"
+                    android:text="증시동향"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="#DC143C"
+                    android:clickable="false"
+                    android:text="프로그램"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
